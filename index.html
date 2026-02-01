@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Valentine ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PASSWORD -->
+<section class="page active" id="lock">
+  <div class="card">
+    <h1>Welcome ❤️</h1>
+    <label>Enter the secret</label>
+    <p>Hint: The day I saw you first</p>
+    <input id="password" type="password"/>
+    <button onclick="unlock()">Unlock</button>
+    <p class="error" id="error"></p>
+  </div>
+</section>
+
+<!-- QUESTION -->
+<section class="page" id="p1">
+  <div class="card">
+    <h1>Will you be my Valentine? 💕</h1>
+    <div class="btns">
+      <button onclick="yesClicked()">YES 💖</button>
+      <button id="noBtn" class="no">NO 😒</button>
+    </div>
+  </div>
+</section>
+
+<!-- YES PAGE -->
+<section class="page" id="p2">
+  <div class="card">
+    <h1>You said YES 😍</h1>
+    <p id="typed"></p>
+    <button onclick="go('p2','p3')">Start Our Days 💫</button>
+  </div>
+</section>
+
+<!-- DAYS -->
+<section class="page" id="p3"><div class="card"><h1>Rose Day 🌹</h1><img src="assets/rose.png"><p>You are my forever rose.</p><button onclick="go('p3','p4')">Next</button></div></section>
+<section class="page" id="p4"><div class="card"><h1>Propose Day 💍</h1><img src="assets/propose.png"><p>I choose you. Always.</p><button onclick="go('p4','p5')">Next</button></div></section>
+<section class="page" id="p5"><div class="card"><h1>Chocolate Day 🍫</h1><img src="assets/chocolate.png"><p>Life is sweeter with you.</p><button onclick="go('p5','p6')">Next</button></div></section>
+<section class="page" id="p6"><div class="card"><h1>Teddy Day 🧸</h1><img src="assets/teddy.png"><p>You are my comfort.</p><button onclick="go('p6','p7')">Next</button></div></section>
+<section class="page" id="p7"><div class="card"><h1>Promise Day 🤝</h1><img src="assets/promise.png"><p>I promise to stand by you.</p><button onclick="go('p7','p8')">Next</button></div></section>
+<section class="page" id="p8"><div class="card"><h1>Hug Day 🤗</h1><img src="assets/hug.png"><p>Here’s a warm hug.</p><button onclick="go('p8','p9')">Next</button></div></section>
+<section class="page" id="p9"><div class="card"><h1>Kiss Day 💋</h1><img src="assets/kiss.png"><p>A kiss full of love.</p><button onclick="go('p9','p10')">Next</button></div></section>
+
+<!-- FINAL -->
+<section class="page" id="p10">
+  <div class="card heartbeat">
+    <h1>Valentine’s Day ❤️</h1>
+    <img src="assets/valentine.png">
+    <p>You are my today and all my tomorrows.</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

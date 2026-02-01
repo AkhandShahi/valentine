@@ -1,0 +1,127 @@
+* { box-sizing: border-box; }
+
+/* 🌈 BACKGROUND */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #b1123f, #2a0c16 70%);
+  color: #fff1f2;
+  overflow: hidden;
+}
+
+/* PAGE SYSTEM */
+.page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* CARD */
+.card {
+  width: 90%;
+  max-width: 420px;
+  background: linear-gradient(160deg, #7a1f3d, #be123c);
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* TEXT */
+h1 { margin-bottom: 12px; }
+p  { opacity: 0.95; margin-bottom: 12px; }
+
+/* LABEL + INPUT */
+label {
+  display: block;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #fb7185, #be123c);
+  box-shadow: 0 12px 35px rgba(225,29,72,0.7);
+}
+
+/* RUNAWAY BUTTON */
+.btns { position: relative; }
+.no {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: auto;
+  padding: 10px 22px;
+}
+
+/* IMAGE */
+img {
+  width: 75%;
+  max-width: 260px;
+  border-radius: 18px;
+  margin: 10px 0;
+}
+
+/* ERROR */
+.error { color: #fecdd3; }
+
+/* ❤️ HEARTBEAT */
+.heartbeat {
+  animation: beat 1.4s infinite;
+}
+
+@keyframes beat {
+  30% { transform: scale(1.05); }
+}
+
+/* 🌹 ROSE PETALS */
+.petal {
+  position: fixed;
+  top: -40px;
+  width: 14px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #fecdd3, #ef0540);
+  border-radius: 60%;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: fall 7s linear forwards, sway 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes sway {
+  0% { margin-left: 0; }
+  50% { margin-left: 25px; }
+  100% { margin-left: -25px; }
+}
