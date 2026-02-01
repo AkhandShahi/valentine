@@ -77,10 +77,13 @@ button {
 .btns { position: relative; }
 .no {
   position: absolute;
-  right: 0;
   top: 60px;
+  right: 0;
   width: auto;
   padding: 10px 22px;
+
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 /* IMAGE */
