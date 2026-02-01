@@ -16,10 +16,17 @@ function go(from, to) {
 
 /* NO button runs */
 const noBtn = document.getElementById("noBtn");
-noBtn.addEventListener("mouseover", () => {
-  noBtn.style.left = Math.random() * 70 + "%";
-  noBtn.style.top = Math.random() * 70 + "%";
-});
+
+noBtn.addEventListener("mouseenter", moveNoButton);
+noBtn.addEventListener("touchstart", moveNoButton);
+
+function moveNoButton() {
+  const x = Math.random() * 200 - 100; // -100 to +100
+  const y = Math.random() * 120 - 60;  // -60 to +60
+
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
 
 /* YES clicked */
 function yesClicked() {
